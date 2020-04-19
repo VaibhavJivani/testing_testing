@@ -13,12 +13,16 @@
 /*****************************************************
  * FUNCTION DEFINITIONS
  *****************************************************/
-
-/*
+*
  * (private) function creates a new node; if it returns NULL, malloc() was unable to do it!
  */
 stuLL_t* createNodeLinkedList(void)
 {
+	stuLL_t* t=NULL;
+	t = (stuLL_t*) malloc(sizeof(stuLL));
+	t -> pNext=NULL;
+	return t;
+
 	// PROBLEM #1: complete the code for this function
 	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
 }

@@ -13,13 +13,13 @@
 /*****************************************************
  * FUNCTION DEFINITIONS
  *****************************************************/
-*
+/*
  * (private) function creates a new node; if it returns NULL, malloc() was unable to do it!
  */
 stuLL_t* createNodeLinkedList(void)
 {
 	stuLL_t* t=NULL;
-	t = (stuLL_t*) malloc(sizeof(stuLL));
+	t = (stuLL_t*) malloc(sizeof(stuLL_t));
 	t -> pNext=NULL;
 	return t;
 
@@ -98,6 +98,7 @@ stuLL_t* findLinkedList(stuLL_t *pHEAD, char *targetFamilyName)
 		{
 			// PROBLEM #2: complete the code for this function
 			//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
+			pW = pW->pNext; //stores the address of a node(found) into pHead
 		}
 		printf("\n");
 	}

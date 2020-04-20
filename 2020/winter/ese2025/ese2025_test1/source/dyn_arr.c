@@ -64,7 +64,8 @@ int comparo_grade(const void *pA, const void *pB)
 		// get student grades
 		float grade_A = student_A.data.grade;
 		float grade_B = student_B.data.grade;
-
+		// need to compare with if-else, because cant use string compare for float values.
+		//
 		if(grade_A == grade_B){
 			return 0;
 		}
@@ -119,9 +120,12 @@ stuDA_t* sortDynamicArray(stuDA_t *pHEAD, const sort_t sort_type,
 		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_fName);
 		break;
 	case gNamesort:
+		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_gName);
+		break;
 		// fill the code here for Part a)
 	case gradesort:
-
+		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_grade);
+		break;
 		// fill the code here for Part b)
 	}
 	return pHEAD;
